@@ -43,12 +43,14 @@ INSTALLED_APPS = [
     'user_account',
     'crispy_forms',
     'shopping_cart',
-    'contact',
+    'contact.apps.ContactConfig',
     'payment',
     'shopping_history',
     'discounts',
     'category',
 ]
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
