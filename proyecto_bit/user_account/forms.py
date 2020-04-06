@@ -4,6 +4,8 @@ from .models import Customer
 
 class UserAccount(forms.Form):
     name = forms.CharField(label='Nombre', max_length=20, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    lastname = forms.CharField(label='Apellido', max_length=20, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    # birthday = forms.DateTimeField()
     phone = forms.CharField(max_length=20, label='Celular', widget=forms.TextInput(attrs={'class': 'form-control'}))
     address = forms.CharField(label='Direccion', widget=forms.TextInput(attrs={'class': 'form-control'}))
     country = forms.CharField(label='Pais', max_length=20, widget=forms.TextInput(attrs={'class': 'form-control'}))

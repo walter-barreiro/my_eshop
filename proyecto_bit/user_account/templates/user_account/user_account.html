@@ -7,30 +7,6 @@ User account
 {% endblock %}
 
 {% block content %}
-<!--<form method="POST" class="form-group">-->
-<!--    {% csrf_token %}-->
-<!--    {{ form.name.label }}-->
-<!--    {{ form.name }}-->
-
-<!--    {{ form.phone.label }}-->
-<!--    {{ form.phone }}-->
-
-<!--    {{ form.address.label }}-->
-<!--    {{ form.address }}-->
-
-<!--    {{ form.country.label }}-->
-<!--    {{ form.country }}-->
-
-<!--    {{ form.city.label }}-->
-<!--    {{ form.city }}-->
-
-<!--    <button type="submit" class="btn btn-success">Save</button>-->
-<!--    {% for message in messages %}-->
-<!--        <p id="messages" >{{message}} </p>-->
-<!--    {% endfor %}-->
-<!--</form>-->
-
-
 <div class="container">
     <form method="POST" class="form-horizontal" role="form">
     {% csrf_token %}
@@ -43,28 +19,15 @@ User account
                     <div class="form-group">
                         <label class="col-sm-3 control-label">{{ form.name.label }}</label>
                         <div class="col-sm-9">
-    <!--                        <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus>-->
                             {{ form.name }}
                         </div>
                     </div>
-    <!--                <div class="form-group">-->
-    <!--                    <label for="lastName" class="col-sm-3 control-label">Last Name</label>-->
-    <!--                    <div class="col-sm-9">-->
-    <!--                        <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--                <div class="form-group">-->
-    <!--                    <label for="email" class="col-sm-3 control-label">Email* </label>-->
-    <!--                    <div class="col-sm-9">-->
-    <!--                        <input type="email" id="email" placeholder="Email" class="form-control" name= "email">-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--                <div class="form-group">-->
-    <!--                    <label for="birthDate" class="col-sm-3 control-label">Date of Birth*</label>-->
-    <!--                    <div class="col-sm-9">-->
-    <!--                        <input type="date" id="birthDate" class="form-control">-->
-    <!--                    </div>-->
-    <!--                </div>-->
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">{{ form.lastname.label }}</label>
+                        <div class="col-sm-9">
+                            {{ form.lastname }}
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">{{ form.phone.label }} </label>
                         <div class="col-sm-9">
@@ -89,28 +52,9 @@ User account
                            {{ form.country }}
                         </div>
                     </div>
-    <!--                <div class="form-group">-->
-    <!--                    <label class="control-label col-sm-3">Gender</label>-->
-    <!--                    <div class="col-sm-6">-->
-    <!--                        <div class="row">-->
-    <!--                            <div class="col-sm-4">-->
-    <!--                                <label class="radio-inline">-->
-    <!--                                    <input type="radio" id="femaleRadio" value="Female">Female-->
-    <!--                                </label>-->
-    <!--                            </div>-->
-    <!--                            <div class="col-sm-4">-->
-    <!--                                <label class="radio-inline">-->
-    <!--                                    <input type="radio" id="maleRadio" value="Male">Male-->
-    <!--                                </label>-->
-    <!--                            </div>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                </div> &lt;!&ndash; /.form-group &ndash;&gt;-->
                     {% for message in messages %}
                         <p id="messages" >{{message}} </p>
                     {% endfor %}
-
-
                     </div>
             <button type="submit" class="btn btn-success btn-block">Guardar cambios</button>
             </div>

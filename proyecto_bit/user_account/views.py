@@ -10,6 +10,7 @@ def user_account(request):
     users = Customer.objects.filter(user=request.user).first()
     initial = {
         'name': users.name,
+        'lastname': users.lastname,
         'phone': users.phone,
         'address': users.address,
         'country': users.country,
@@ -22,6 +23,7 @@ def user_account(request):
             # Para guardar los datos del usuario en el modelo Customer
             users = Customer.objects.filter(user=request.user).update(
                 name=form.cleaned_data['name'],
+                lastname=form.cleaned_data['lastname'],
                 phone=form.cleaned_data['phone'],
                 address=form.cleaned_data['address'],
                 country=form.cleaned_data['country'],

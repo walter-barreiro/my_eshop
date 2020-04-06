@@ -5,6 +5,9 @@ from django.contrib.auth.models import User
 class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True )
     name = models.CharField(max_length=20, null=True)
+    lastname = models.CharField(max_length=20, null=True)
+    # gender = models.Choices()
+    # birthday = models.DateTimeField()
     phone = models.CharField(max_length=20, null=True)
     address = models.TextField(null=True)
     country = models.CharField(max_length=20, null=True)
