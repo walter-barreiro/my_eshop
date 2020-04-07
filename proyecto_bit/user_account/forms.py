@@ -10,7 +10,7 @@ class UserAccount(forms.Form):
     address = forms.CharField(label='Direccion', widget=forms.TextInput(attrs={'class': 'form-control'}))
     country = forms.CharField(label='Pais', max_length=20, widget=forms.TextInput(attrs={'class': 'form-control'}))
     city = forms.CharField(label='Ciudad', max_length=20, widget=forms.TextInput(attrs={'class': 'form-control'}))
-
+    email = forms.EmailField(label='Email', widget=forms.TextInput(attrs={'class': 'form-control', 'type': 'email'}))
 
 
 

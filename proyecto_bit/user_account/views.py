@@ -7,6 +7,7 @@ from django.contrib import messages
 
 @login_required(login_url='login')
 def user_account(request):
+    user = request.user
     users = Customer.objects.filter(user=request.user).first()
     initial = {
         'name': users.name,
@@ -16,7 +17,7 @@ def user_account(request):
         'address': users.address,
         'country': users.country,
         'city': users.city,
-        'email': users.email
+        'email': user.email
     }
     if request.method == "POST":
         form = UserAccount(request.POST)
