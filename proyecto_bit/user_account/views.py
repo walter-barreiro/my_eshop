@@ -10,6 +10,7 @@ def user_account(request):
     users = Customer.objects.filter(user=request.user).first()
     initial = {
         'name': users.name,
+        'birthday': users.birthday.date,
         'lastname': users.lastname,
         'phone': users.phone,
         'address': users.address,
@@ -24,6 +25,7 @@ def user_account(request):
             users = Customer.objects.filter(user=request.user).update(
                 name=form.cleaned_data['name'],
                 lastname=form.cleaned_data['lastname'],
+                birthday=form.cleaned_data['birthday'],
                 phone=form.cleaned_data['phone'],
                 address=form.cleaned_data['address'],
                 country=form.cleaned_data['country'],

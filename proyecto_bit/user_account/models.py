@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -7,7 +9,7 @@ class Customer(models.Model):
     name = models.CharField(max_length=20, null=True)
     lastname = models.CharField(max_length=20, null=True)
     # gender = models.Choices()
-    # birthday = models.DateTimeField()
+    birthday = models.DateTimeField(null=True, default=datetime.now)
     phone = models.CharField(max_length=20, null=True)
     address = models.TextField(null=True)
     country = models.CharField(max_length=20, null=True)
