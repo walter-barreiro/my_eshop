@@ -17,6 +17,8 @@ Historial de compras
                     {{item.name}} ${{item.buy_price}} Cantidad: {{item.quantity}} Subtotal: ${{ item.sub_total_history }} Fecha:
                     {{item.pay_date}}
                 </li>
+            {% else %}
+                Aún no has realizado compras
             {% endif %}
         {% empty %}
             Aún no has realizado compras
